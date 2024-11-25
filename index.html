@@ -5,13 +5,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/CVCSS.css">
+    <link rel="stylesheet" media="screen and (min-width: 0px) and (max-width: 10000px)" href="assets/css/CVCSS.css">
     <title>CV - Raphaël Alizier</title>
 </head>
 
 <body>
     <div class="container">
         <nav class="navbar">
+            <div class="menu-burger">
+                <input type="checkbox" id="hamburger">
+                <label id="hamburger-logo" for="hamburger">☰</label>
+                <nav class="mobile-menu">
+                    <!-- renvoie sur la même page à des endroits différents -->
+                    <a href="#Presentation">Presentation</a>
+                    <a href="Formation">Formatation</a>
+                    <a href="#Competences">Mes compétences</a>
+                    <a href="#Experiences">Mon expériences professionnelle</a>
+                    <a href="#Réalisation">Mes réalisations</a>
+                </nav>
+            </div>
             <ul class="nav-list">
                 <li><a href="#Presentation"> Présentation</a></li>
                 <li><a href="#Formation"> Formation</a></li>
@@ -32,12 +44,12 @@
         <p>
         <section id="Formation" class="section">
             <h1> Formation </h1>
-            <ul class="formation-list">
+            <ul >
                 <li><strong>Sept 2024 - Sept 2027</strong> Préparation d’un Bachelor en développement web, Ecole
                     Supérieure des Métiers du Numériques à Compiègne et du
                     Titre RNCP Bac +3 – Niveau 6 </li>
-                <li><strong>2021 - 2024 Lycée Charles de Gaulle à Compiègne (60) <br> Spécialités :</strong>
-                    <ul>
+                <li class="prespe"><strong>2021 - 2024 Lycée Charles de Gaulle à Compiègne (60) <br> Spécialités :</strong>
+                    <ul class="spe">
                         <li>Numérique Science Informatique (Terminale)</li>
                         <li>Littérature Anglais (Terminale)</li>
                         <li>Mathématiques (Première)</li>
@@ -69,23 +81,27 @@
         </section>
         </p>
         <section id="cote" class="section">
-            <h2><strong>Raphaël Alizier</strong></h2>
+            <h2><strong>Raphaël Alizier</strong></h2><br>
             <p>né le 10/11/2006 <br>
                 téléphone : <a href="tel:+33768867466">07 68 86 74 66</a> <br>
                 mail : <a href="mailto:raphalizier2@gmail.com"> raphalizier2@gmail.com </a><br>
                 adresse : 60190 Arsy <br>
                 GitHub : <a href="https://github.com/raphali">github.com/raphali</a> <br>
-            </p>
-            <h1>Langues</h1>
+            </p><br>
+            <h1>Langues</h1><br>
             <p>Anglais : B2 <br>
-                Espagnol : A2
-            </p>
+                Espagnol : A2 
+            </p><br>
             <h1>Points forts</h1>
             <p>Curieux <br>
                 Ouvert d'esprit <br>
                 Motivé <br>
-                Rigoureux </p>
-            <h1>Centres d'intérêt</h1>
+                Rigoureux </p><br>
+            <h1>Centres d'intérêt</h1> <br>
+            <p> Le cinéma, la musique et le sport</p>
+        </section>
+        <section id="photo">
+            <img src="#" alt="Photo Raphaël Alizier">
         </section>
 
     </div>
