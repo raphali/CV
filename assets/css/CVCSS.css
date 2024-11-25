@@ -3,130 +3,62 @@
     padding: 0;
 }
 
+/* Change la couleur du fond */
 body {
-    background: linear-gradient(to left, rgb(146, 181, 231) 1200px, white 100px);
+    background-color: #92b5e7;
     font-family: Arial, sans-serif;
 }
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(8, 1fr);
-    gap:20px;   
-    height: 100vh; 
-}
-
-nav {
-    background-color: white;
-    grid-column:1/4;
-    grid-row:1;
-    height:30px;
-    padding: 10px;
-}
-
-.nav-list {
-    list-style: none;
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    
-}
-
-.nav-list a {
+a{
     text-decoration: none;
-    color: black;
-    font-size: 18px;
-    transition: color 0.3s;
+    color: #ffffff;
+    font-weight: bold;
 }
 
-.nav-list a:hover {
-    color: rgb(146, 181, 231);
+p{
+    margin-left:3%;
 }
 
-#Presentation {
-    grid-column: 2; 
-    grid-row: 2;
+ul{
+    margin-left: 4%;
 }
 
-#Presentation>h1 {
-    background-color: white;
-}
-
-#Formation {
-    grid-column: 2;
-    grid-row:3;
-    
-}
-
-#Formation>ul {
-    list-style:none;
-}
-
-#Formation>h1 {
-    background-color: white;
-}
-
-
-
-#Competences {
-    grid-column: 2;
-    grid-row: 4;
-}
-
-#Competences>h1 {
-    background-color: white;
-}
-
-#Experiences {
-    grid-column: 2;
-    grid-row: 5;
-}
-
-#Experiences>h1 {
-    background-color: white ;
-}
-
-#Realisation {
-    grid-column:2;
-    grid-row:6;
-}
-
-#Realisation>h1 {
-    background-color:white;
-}
-
-#cote {
-    grid-column: 1;
-    grid-row:3/5;
-    margin-left:10px;
-}
-
-#photo {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.menu-burger {
+/* nav et menu burger */
+/* on enleve les liens réservés à la version ordinateur */
+.links {
     display: none;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin:3%;
+    padding:2%;
+}
+
+/* pour afficher le menu burger ainsi que les inscriptions en version mobile */
+.menu-burger {
+    display: flex;
     flex-direction: column;
     gap: 10px;
     position: relative;
 }
 
 #hamburger-logo {
+    position: fixed;
     cursor: pointer;
-    background: rgb(146, 181, 231);
+    background: #92b5e7;
     width: 50px;
     text-align: center;
     padding: 10px;
-    color: black;
+    color: #ffffff;
     font-size: 20px;
 }
 
 .mobile-menu {
+    position: fixed;
     display: none;
     flex-direction: column;
-    background: white;
+    background: #92b5e7;
     position: absolute;
     top: 50px;
     left: 0;
@@ -135,40 +67,158 @@ nav {
 }
 
 .mobile-menu a {
-    color: black;
-    text-decoration: none;
+    color: #ffffff;
     padding: 10px;
     transition: background 0.3s;
 }
 
 .mobile-menu a:hover {
-    background: rgb(146, 181, 231);
+    background: #444;
 }
 
-#hamburger:checked ~ .mobile-menu {
+#hamburger:checked~.mobile-menu {
+    position: fixed;
     display: flex;
 }
 
 #hamburger {
+    position: fixed;
     display: none;
 }
 
-@media screen and (max-width: 768px) {
-    .menu-burger {
-        display: flex;
+
+@media screen and (min-width: 1025px) {
+
+
+    /* Change la couleur du fond */
+    body {
+        background: linear-gradient(to left, #92b5e7 1200px, white 100px);
     }
 
-    .nav-links {
+    /* nav  */
+    /* pour afficher la nav la couleur et les liens en ordi */
+    nav {
+        position: fixed;
+        background-color: #92b5e7;
+        height: 7vh;
+        width: 100%;
+    }
+
+    .links {
+        /* pour les aligner éléments les uns à côté des autres, enlever les points des listes, définir la taille de la nav ainsi que la police et sa taille  */
+        font-size: 1.4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        font-family: "Blinker", sans-serif;
+        font-weight: bold;
+    }
+
+    /* couleur des inscriptions de la nav */
+    .links li a {
+        color: #ffffff;
+        padding: 10px;
+    }
+
+    /* on enlève la version mobile on fait qu'elle ne soit pas visible */
+    .menu-burger {
         display: none;
     }
-}
 
-@media screen and (min-width: 769px) {
-    .nav-links {
-        display: flex;
+    /* Défini le grid */
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        gap: 20px;
+        height: 100vh;
     }
 
-    .menu-burger {
-        display: none;
+
+    /* Place la présentation */
+    #Presentation {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    /* Colorie le fond du titre en blanc */
+    #Presentation>h1 {
+        background-color: white;
+    }
+
+    /* Place la partie Formation */
+    #Formation {
+        grid-column: 2;
+        grid-row: 3;
+
+    }
+
+    /* Retire les points de la liste */
+    #Formation>ul {
+        list-style: none;
+    }
+
+    /* Colorie le fond du titre en blanc */
+    #Formation>h1 {
+        background-color: white;
+    }
+
+    /* Place la partie Competences */
+    #Competences {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    /* Colorie le fond du titre en blanc */
+    #Competences>h1 {
+        background-color: white;
+    }
+
+    /* Place la partie expériences */
+    #Experiences {
+        grid-column: 2;
+        grid-row: 5;
+    }
+
+    /* Colorie le fond du titre en blanc */
+    #Experiences>h1 {
+        background-color: white;
+    }
+
+    /* Place la partie réalisation */
+    #Realisation {
+        grid-column: 2;
+        grid-row: 6;
+    }
+
+    /* Colorie le fond du titre en blanc */
+    #Realisation>h1 {
+        background-color: white;
+    }
+
+    /* Place la partie  */
+    #cote {
+        grid-column: 1;
+        grid-row: 3/5;
+        margin-left: 10px;
+
+    }
+
+    #cote h1 {
+        display: flex;
+        justify-content: left;
+
+    }
+
+    #cote>p a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #photo {
+        grid-column: 1;
+        grid-row: 2;
     }
 }
